@@ -1,0 +1,26 @@
+- Hashcat là một công cụ khôi phục mã hash dựa vào CPU/GPU nên tốc độ rất nhanh
+# Các option trong hashcat
+- ```-V```: Check phiên bản
+- ```-m```: Phương thức hash của đoạn mã (có thể dùng hash indentifier để xác định)
+- ```-a```: Attack mode:
+  - Straight (hay Dictionary) Attack: Kiểu atk cơ bản nhất
+  - Combination: Sẽ cung cấp 2 danh sách để thực hiện (có thể nói là 2 straight atk), thường sử dụng với mục đich lấy cả username và password
+  - Brute-force: Giống Straight nhưng thay vì các từ thì ở đây sẽ là các kí tự, nó sẽ ghép các kí tự và thử đến khi đúng, cách này rõ ràng có thể mất rất nhiều thời gian tuỳ vào độ phức tạp của pass
+  - Hybrid: Kết hợp Straigh + Brute
+  - Association: Vẫn là kết hợp nhưng nhưng mà nhiều hơn
+- ```--quiet```: Hạn chế tối đa output
+- ```--force```: Bỏ qua cảnh báo
+- ```--stdin-timeout-abort```: Bỏ qua nếu không có input trong khoảng thời gian (giây) được chỉ định
+- ```--machine-readable```: Hiển thị trạng thái ở định dạng dành cho máy tính
+- ```--keep-guessing```: Tiếp tục đoán hash ngay cả khi đã crack xong
+- ```--self-test-disable```: Tắt tính năng self-test (là một tính năng giúp đảm bảo hashcat hoạt động ổn định bằng cách cho hashcat thử xử lý một vài thuật toán hash để kiểm tra)
+- ```--loopback```: Lấy danh sách tất cả mật khẩu bị bẻ khoá ở mode 0 và luân chuyển chúng trong suốt quá trình. VD, có 2 pass là "pass1" và "pass10". Nếu bạn có một wordlist với từ "pass" trong đó và một rule list là thêm từ 0 đến 9 vào cuối mỗi pass. Lần chạy đầu tiên nó sẽ là pass1, nhưng mỗi lần lặp nó sẽ thêm pass1 vào wordlist, và rồi apply rule 0-9 để được kết quả tiếp theo là pass10
+- ```-o=FILE```: Chỉ định file output
+- ```-p=CHAR```: Chỉ định dấu ngăn cách cho hashfile/outfile
+- ```--show``` và ```--left```: Hiện các pass đã/chưa được crack
+- ```--username```: Bỏ qua username trong hashfile
+- ```--remove```: Remove hash khi đã crack thành công
+- ```--increment```: Bật mode tăng dần
+- ```--increment-min=NUM``` và ```--incrêmnt-max=NUM```: Bắt đầu và kết thúc mode tại NUM
+- ```--logfile-disable```: Tắt logfile
+- ```--speed-only```: Trả về tốc độ dự kiến của đợt tấn công
