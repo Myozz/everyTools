@@ -2,13 +2,16 @@
 # Target:
 - **-u URL**: Chỉ định URL mục tiêu
 - **-d DIRECT**: Chỉ định trực tiếp vào CSDL mục tiêu
-  - VD: -d DBMS://DATABASE_FILEPATH
-- **-l**: target logfile
-- **-m**: scan đa mục tiêu trong file được chỉ định
-- **-r**: load http request từ một file
-- **-g**: Sử dụng googledork để khai thác mục tiêu
-- **-c**: Load các option từ một file .ini
- 
+  - **VD**: -d DBMS://DATABASE_FILEPATH
+- **-l LOGFILE**: Phân tích mục tiêu từ proxy log file của Burp hay WebScarab
+- **-m BULKFILE**: Scan đa mục tiêu từ một file chứa các URL (mỗi dòng một URL)
+- **-r REQUESTFILE**: Load HTTP Request từ một file (có thể là HTTP hay HTTPs)
+- **-g GOOGLEDORK**: Lấy thông tin thu được từ Google Dork làm các URL mục tiêu
+  - **VD**: -g "inurl:test.com intext:admin"
+- **-c CONFIGFILE**: Sử dụng các tuỳ chọn trong config file
+  - **VD**: ![image](https://github.com/Myozz/everyTools/assets/94811005/30edc653-3b18-41ce-b33c-92210326e19d)
+
+
 # Request:
   -A: User-agent header (VD: Mozilla/5.0 (Windows NT 10.0; Win64; x64)...)
 	-H: Header phụ (VD: X-forwarđe-for: 127.0.0.1)
