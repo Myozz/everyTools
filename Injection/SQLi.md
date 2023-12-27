@@ -1,12 +1,12 @@
 ------------------ADVANCED COMMAND-------------------
 # Target:
-  -u: URL
-	-d: target dtb 
-	-l: target logfile
-	-m: scan đa mục tiêu trong file được chỉ định
-	-r: load http request từ một file
-	-g: Sử dụng googledork để khai thác mục tiêu
-	-c: Load các option từ một file .ini
+- **-u**: URL
+- **-d**: target dtb 
+- **-l**: target logfile
+- **-m**: scan đa mục tiêu trong file được chỉ định
+- **-r**: load http request từ một file
+- **-g**: Sử dụng googledork để khai thác mục tiêu
+- **-c**: Load các option từ một file .ini
  
 # Request:
   -A: User-agent header (VD: Mozilla/5.0 (Windows NT 10.0; Win64; x64)...)
