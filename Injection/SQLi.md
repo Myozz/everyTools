@@ -1,7 +1,8 @@
 ------------------ADVANCED COMMAND-------------------
 # Target:
-- **-u**: URL
-- **-d**: target dtb 
+- **-u URL**: Chỉ định URL mục tiêu
+- **-d DIRECT**: Chỉ định trực tiếp vào CSDL mục tiêu
+  - VD: -d DBMS://DATABASE_FILEPATH
 - **-l**: target logfile
 - **-m**: scan đa mục tiêu trong file được chỉ định
 - **-r**: load http request từ một file
