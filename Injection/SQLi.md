@@ -7,14 +7,14 @@
 		sqlmap -u "<http://example.com>" --forms --flush-session --answers="form=Y,fill blank fields=n,skip=Y,tests=N,follow=N,keep=N,quit=Y,resume=Y" --batch
 - **Lưu ý**:
   - Tuỳ chọn ```--flush-session``` để xoá phiên làm việc trước đó, nếu cần sử dụng dữ liệu từ phiên làm việc trước thì cần bỏ tuỳ chọn này
-  - Trường hợp phải xác thực username:password thì ta cần login rồi cung cấp Cookie cho sqlmap bằng option ```--cookie```
+  - Trường hợp phải xác thực username:password thì ta cần login rồi cung cấp Cookie cho sqlmap bằng option ```--cookie``` hoặc có thể cung cấp luôn thông tin của request để chắc chắn
 # Khai thác toàn bộ
 - Quét và thực hiện khai thác lỗ hổng với các tuỳ chọn mặc định
   
 		sqlmap -u "<http://example.com>" --forms --flush-session --batch --all
 - **Lưu ý**:
   - Tuỳ chọn ```--flush-session``` để xoá phiên làm việc trước đó, nếu cần sử dụng dữ liệu từ phiên làm việc trước thì cần bỏ tuỳ chọn này
-  - Trường hợp phải xác thực username:password thì ta cần login rồi cung cấp Cookie cho sqlmap bằng option ```--cookie```
+  - Trường hợp phải xác thực username:password thì ta cần login rồi cung cấp Cookie cho sqlmap bằng option ```--cookie``` hoặc có thể cung cấp luôn thông tin của request để chắc chắn
 # Các lệnh tuỳ chỉnh
 - Lệnh cơ bản:
 
