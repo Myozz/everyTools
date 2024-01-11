@@ -44,5 +44,6 @@
     - ```--uploads-path /hackable/uploads```: Là đường dẫn mà sẽ lưu trữ những dữ liệu mà ta sẽ upload lên đó, ở đây đường dẫn là ```localhost/hackable/uploads```
     - ```data Upload=Upload```: Cung cấp thêm thông tin của upload form, ở đây ta đang cung cấp thông tin của nút upload ![image](https://github.com/Myozz/everyTools/assets/94811005/36951e0d-3ba3-48ba-a766-53f25ae2b1ea)
     - ```--skip-recon -l php```: Cung cấp thông tin rẳng có thể upload file php, bỏ qua kiểm tra
+- Kết quả: ![image](https://github.com/Myozz/everyTools/assets/94811005/68feb399-da6d-4175-9677-6523a21ff6bb)
 
     
