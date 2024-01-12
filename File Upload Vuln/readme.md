@@ -1,6 +1,6 @@
 # Tool fuxploider
 - Link: [https://github.com/almandin/fuxploider](https://github.com/almandin/fuxploider)
-- Đây là một công cụ có khả năng phát hiện lỗ hổng bằng cách thử tải lên mục tiêu các payload, và kiểm tra xem chúng có thể thực thi hay không
+- Đây là một công cụ có khả năng phát hiện lỗ hổng bằng cách thử tải lên mục tiêu các payload, và kiểm tra xem những extension nào có thể sử dụng để khai thác
 ## Một số tuỳ chọn 
 ### Tuỳ chọn bắt buộc
 - ```--url```: Chỉ định URL mục tiêu
@@ -46,4 +46,20 @@
     - ```--skip-recon -l php```: Cung cấp thông tin rẳng có thể upload file php, bỏ qua kiểm tra
 - Kết quả: ![image](https://github.com/Myozz/everyTools/assets/94811005/68feb399-da6d-4175-9677-6523a21ff6bb)
 
-    
+# Tool filepwner
+- Là một công cụ có chức năng tương tự với fuxploider. Nhưng thay vì chỉ upload được những template có sẵn thì filepwner cho phép ta khả năng tuỳ chính tốt hơn cũng nhưng đơn giản hơn khi sử dụng file request thay vì phải cung cấp từng thông tin 
+## Các tuỳ chọn
+- ```-r <FILE>```: Chỉ định request file
+- ```-t <TRUE>```: Cung cấp thông báo upload thành công
+- ```-f <FALSE>```: Cung cấp thông báo upload lỗi
+- ```-a <EXTENSION>```: Chỉ định các extension sẽ được dùng để upload
+- ```--rate-limit <RATE>```: Tuỳ chỉnh khoảng thời gian (giây) giữa 2 request
+- ```-d <DIR>```: Cung cấp path mà dữ liệu upload sẽ được lưu trữ
+- ``` -v 1/2/3```: Mức độ chi tiết của đữ liệu trả về
+- ```--timeout```: Số giây chờ trước khi thông báo Request Timeout
+- ```--status-codes <CODE>```: Cung cấp HTTP Status Code khi upload thành công (mặc định 200)
+- ```--protocol```: Cung cấp giao thức được sử dụng cho upload (mặc định HTTPs)
+- ```--enable-redirects```: Nếu được bật, cho phép form chuyển hướng request
+- ```--manual-check```: Nếu được bật, sẽ tạm dừng thực thi sau mỗi lần upload shell thành công
+- ```--disable-modules <MOD>```: Tắt module chỉ định (mimetype_spoofing, double_extension, double_extension_random_case, 
+reverse_double_extension, null_byte_cutoff,name_overflow_cutoff, htaccess_overwrite)
