@@ -1,4 +1,4 @@
-# Tool fuxploider
+![image](https://github.com/Myozz/everyTools/assets/94811005/c2dc88fc-a1fe-469c-a348-69606061cfca)# Tool fuxploider
 - Link: [https://github.com/almandin/fuxploider](https://github.com/almandin/fuxploider)
 - Đây là một công cụ có khả năng phát hiện lỗ hổng bằng cách thử tải lên mục tiêu các payload, và kiểm tra xem những extension nào có thể sử dụng để khai thác
 ## Một số tuỳ chọn 
@@ -47,6 +47,7 @@
 - Kết quả: ![image](https://github.com/Myozz/everyTools/assets/94811005/68feb399-da6d-4175-9677-6523a21ff6bb)
 
 # Tool filepwner
+- Link: [https://github.com/artemixer/filepwner?tab=readme-ov-file](https://github.com/artemixer/filepwner?tab=readme-ov-file)
 - Là một công cụ có chức năng tương tự với fuxploider. Nhưng thay vì chỉ upload được những template có sẵn thì filepwner cho phép ta khả năng tuỳ chính tốt hơn cũng nhưng đơn giản hơn khi sử dụng file request thay vì phải cung cấp từng thông tin 
 ## Các tuỳ chọn
 - ```-r <FILE>```: Chỉ định request file
@@ -63,3 +64,31 @@
 - ```--manual-check```: Nếu được bật, sẽ tạm dừng thực thi sau mỗi lần upload shell thành công
 - ```--disable-modules <MOD>```: Tắt module chỉ định (mimetype_spoofing, double_extension, double_extension_random_case, 
 reverse_double_extension, null_byte_cutoff,name_overflow_cutoff, htaccess_overwrite)
+## Tuỳ chỉnh
+- Các tuỳ chỉnh của filepwner năm ở trong file ```config.py``` ![image](https://github.com/Myozz/everyTools/assets/94811005/00e098ce-2b7a-45e7-a1f7-eace3dc8d420)
+## Cách sử dụng
+- Tiếp tục sử dụng DVWA để kiểm thử ![image](https://github.com/Myozz/everyTools/assets/94811005/4961e660-4b20-41b4-a6ab-04fc26d22e0f)
+- Command có thể sử dụng ở đây
+
+      python filepwner.py -r burp -t "succesfully uploaded" -d "/hackable/uploads/" --protocol http
+  - ```-r burp``` sẽ chỉ định file burp sử dụng cho Request
+    - Đoạn Request có thể lấy nhanh từ một cố công cụ như Burp, ZAP
+    - Hoặc ta cũng có thể lấy thủ công qua Inspect trên trình duyệt
+      - Lấy Request Header: ![image](https://github.com/Myozz/everyTools/assets/94811005/c3410764-e0d4-4c02-a47b-9ccd8ef99946)
+      - Lấy Request Payload: ![image](https://github.com/Myozz/everyTools/assets/94811005/ca2e35d2-7e70-4b76-899d-9317e1443747)
+      - Ghép 2 thành phần trên thành một file và chỉnh sửa các tham số của filename và nội dung file thành ```*filename*``` và ```*content*``` ![image](https://github.com/Myozz/everyTools/assets/94811005/af863c6a-caf1-47e3-b788-d36be021604d)
+    - ```-t "succesfully uploaded"```: Tương tự true-regex của fuxploider
+    - ```-d "/hackable/uploads/"```: Tương tự upload-path của fuxploider
+    - ```--protocol http```: Chỉ định Request là http (mặc định là https)
+- Kết quả: ![image](https://github.com/Myozz/everyTools/assets/94811005/4e0bc88c-7d1d-410c-8600-3094fe4b8aed)
+
+# Tool Upload-Bypass
+- Link: [https://github.com/sAjibuu/Upload_Bypass?tab=readme-ov-fileƯ](https://github.com/sAjibuu/Upload_Bypass?tab=readme-ov-file)
+- Là một phiển bản nguyên thuỷ hơn của filepwn nhưng do công cụ này thường upload các payload có extension là .com nên không thể kiểm tra tính thực thi của payload được (Điều này có lẽ sẽ được giải quyết nếu chỉnh sửa lại mã nguồn)
+## Tuỳ chọn
+- Vẫn mang các tuỳ chọn như filepwner, tuy nhiên vẫn có những chức năng khá nổi bật
+  - **Webshell mode**: Công cụ sẽ thử upload một Webshell với tên ngẫu nhiên, và nếu upload-path được chỉ định thì công cụ sẽ thực hiện upload shell
+  - **Eicar mode** (```--eicar```): Công cụ sẽ thử upload một Anti-Mailware test file thay vì một Webshell. Nếu upload-path được chỉ định, công cụ sẽ kiểm tra xem file có upload thành công và tồn tại trên hệ thống hay không để xác định nếu hệ thống có Anti-Mailware
+  - **Output**: Khi thực hiện test xong sẽ lưu lại directory của file được upload cùng tên host dưới dạng file Text hay Excel (có thể chỉ định đường dẫn bằng ```-o```)
+  - ```--insecure```: Công cụ sẽ bỏ qua TLS/SSL cert
+  - ```--resume <STATE>```: Cung cấp một file trạng thái để tiếp tục scan hoàn chỉnh (.json)
