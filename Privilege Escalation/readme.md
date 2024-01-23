@@ -1,4 +1,4 @@
-# SUDO_KILLER
+![image](https://github.com/Myozz/everyTools/assets/94811005/92c08546-91c8-4ab3-a673-98597e0d72ac)# SUDO_KILLER
 ## Giới thiệu
 - Link: [https://github.com/TH3xACE/SUDO_KILLER](https://github.com/TH3xACE/SUDO_KILLER)
 - Đây là một công cụ được thiết kế để khai thác Privilege Escalation trên các hệ thống Unix-like.
@@ -26,7 +26,7 @@
   - Bước tiếp theo là tạo một file setup.sh bên trong directory này với nội dung là ![image](https://github.com/Myozz/everyTools/assets/94811005/e7cf4563-0a5c-4169-928a-047cca115ac6)
   - Gán quyền thực thi cho file và chạy nó dưới quyền của sudo
   - Khi này để thực thi file vừa tạo ta cần phải quay lại thư mục gốc và chạy lệnh bằng sudo thôi ![image](https://github.com/Myozz/everyTools/assets/94811005/cb1ac512-c235-4e16-9bbf-be40ba5adc72)
-### Excessive Right
+### Excessive Right 
 ![image](https://github.com/Myozz/everyTools/assets/94811005/8f83d3bd-ede4-491e-ad59-b1f41b7bd611)
 - Kiếm tra quyền của file và thư mục ![image](https://github.com/Myozz/everyTools/assets/94811005/efca74c2-151f-4801-8b64-772cbd6389f5)
 - Ta thấy được có 2 file start và restart và ta (user) đang sở hữu file start.sh
@@ -39,3 +39,18 @@
 - Ta thấy user có thể sử dụng file stop.sh với quyền sudo
 - SUDO_KILLER thông báo thiếu file stop.sh tại đường dẫn của nó, vậy có nghĩa là đang có lỗi Missing Script tại đây
 - Ta tạo file stop.sh với nội dung bash bất kỳ, rồi chạy nó bằng sudo ![image](https://github.com/Myozz/everyTools/assets/94811005/a1e31bdb-7249-434f-a38d-fccccb03e1d6)
+### Dangerous environment variables
+![image](https://github.com/Myozz/everyTools/assets/94811005/1084bb09-0beb-45ea-9497-37df4d2cfa2c)
+- Ta sẽ làm theo hướng dẫn:
+  - Copy file script trong dir exploits của tool sang dir /tmp/ của hệ thống
+  - Thực thi lệnh ```sudo exploits/Env_exploit2.so <lệnh có thể chạy bằng sudo>``` (Kiểm tra bằng ```sudo -l```
+  - ![image](https://github.com/Myozz/everyTools/assets/94811005/170dd49f-a63f-4fff-8b49-010487decb2f)
+  - Ta thấy user có quyền thực thi lệnh cp bằng sudo. Vậy nên câu lệnh sẽ như sau: ```sudo exploits/Env_exploit2.so cp``` ![image](https://github.com/Myozz/everyTools/assets/94811005/cc6878e3-cf8a-40a6-94f3-b38618162db0)
+### File permission hijacking (Chiếm quyền file)
+![image](https://github.com/Myozz/everyTools/assets/94811005/be3fccdc-62cc-4651-b4c8-00d62fffac3f)
+- Thực thi lệnh ```sudo /usr/local/bin/suđoeit /etc/printcap```
+- Bên trong text editor, thực thi lệnh ```:set shell=/bin/sh``` rồi đến ```:shell```, ta sẽ mở được một root shell
+### CVE-2019-14287
+![image](https://github.com/Myozz/everyTools/assets/94811005/d43f18d7-0a5f-4135-8fb8-a7cc47454669)
+- Làm theo hướng dẫn, ta thực thi lệnh sudo -u#-1 <path>, theo như tool thì có 2 path ta có thể dùng là **/bin/bash** và **/usr/bin/id**. Chỉ đơn giản như vậy và ta có thể vào root dễ dàng
+- 
