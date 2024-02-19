@@ -1,0 +1,2 @@
+- Một công cụ hỗ trợ tạo payloads phù hợp để upload lên mục tiêu
+- Tham khảo các câu lệnh qua [cheatsheet](https://infinitelogins.com/2020/01/25/msfvenom-reverse-shell-payload-cheatsheet/)
