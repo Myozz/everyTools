@@ -54,4 +54,4 @@
 ### CVE-2019-14287
 ![image](https://github.com/Myozz/everyTools/assets/94811005/d43f18d7-0a5f-4135-8fb8-a7cc47454669)
 - Làm theo hướng dẫn, ta thực thi lệnh sudo -u#-1 <path>, theo như tool thì có 2 path ta có thể dùng là **/bin/bash** và **/usr/bin/id**. Chỉ đơn giản như vậy và ta có thể vào root dễ dàng
-- 
+- \
