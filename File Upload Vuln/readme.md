@@ -1,4 +1,5 @@
-![image](https://github.com/Myozz/everyTools/assets/94811005/c2dc88fc-a1fe-469c-a348-69606061cfca)# Tool fuxploider
+![image](https://github.com/Myozz/everyTools/assets/94811005/c2dc88fc-a1fe-469c-a348-69606061cfca)
+# Tool fuxploider
 - Link: [https://github.com/almandin/fuxploider](https://github.com/almandin/fuxploider)
 - Đây là một công cụ có khả năng phát hiện lỗ hổng bằng cách thử tải lên mục tiêu các payload, và kiểm tra xem những extension nào có thể sử dụng để khai thác
 ## Một số tuỳ chọn 
