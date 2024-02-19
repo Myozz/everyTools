@@ -1,2 +1,3 @@
 - Một công cụ hỗ trợ tạo payloads phù hợp để upload lên mục tiêu
 - Tham khảo các câu lệnh qua [cheatsheet](https://infinitelogins.com/2020/01/25/msfvenom-reverse-shell-payload-cheatsheet/)
+- Có thể kết hợp với metasploit để lấy meterpreter, hỗ trợ việc truyền file giữa 2 máy dễ dàng hơn và một số chức năng khác
