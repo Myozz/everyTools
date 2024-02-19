@@ -35,3 +35,4 @@
 - Sau khi có được Meterpreter, bây giờ ta sẽ thử upload file GTFOnow lên mục tiêu bằng lệnh ```upload``` và dùng lệnh ```shell``` để thực thi lệnh trên mục tiêu ![image](https://github.com/Myozz/everyTools/assets/94811005/54420ce7-9162-4395-854c-81e747478410)
 - Thực thi lệnh ```python gtfonow.py -a``` để bắt đầu khai thác tự động ![image](https://github.com/Myozz/everyTools/assets/94811005/c41eb7a8-29fa-425c-a729-b11adff819fb) 
 - Như vậy là ta đã thành công leo quyền root lên mục tiêu
+
