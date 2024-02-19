@@ -83,7 +83,7 @@ Các tool ở đây thường là để upload lên mục tiêu sau khi đã l�
 - ```--auto```: Tự động khai thác thay vì yêu cầu chúng ta chọn
 - ```-v```: Theo dõi tiến độ khi khai thác 
 ## Thử nghiệm
-- Ta sẽ thực hiện qua một lab upload vuln ![image](https://github.com/Myozz/everyTools/assets/94811005/8c3a5213-aeac-4cee-ac09-68307936bfd1
+- Ta sẽ thực hiện qua một lab upload vuln ![image](https://github.com/Myozz/everyTools/assets/94811005/5f5e3825-e537-4cdb-8d6f-683361e44244)
 - Sử dụng các công cụ tìm path/dir trên mục tiêu ta biết được mục tiêu lưu file tại path ```/uploads```
 - Tiếp tục kiểm tra xem mục tiêu cho phép upload định dạng file nào, có thể tham khảo qua [https://github.com/Myozz/everyTools/tree/main/File%20Upload%20Vuln](https://github.com/Myozz/everyTools/tree/main/File%20Upload%20Vuln)
 - Sau khi thực hiện kiểm tra, ta thấy được có thể sử dụng các định dạng file php1, php2,... (trừ php) có thể được sử dụng để khai thác
