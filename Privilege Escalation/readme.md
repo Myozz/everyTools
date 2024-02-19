@@ -1,4 +1,5 @@
-![image](https://github.com/Myozz/everyTools/assets/94811005/92c08546-91c8-4ab3-a673-98597e0d72ac)# SUDO_KILLER
+# SUDO_KILLER
+![image](https://github.com/Myozz/everyTools/assets/94811005/92c08546-91c8-4ab3-a673-98597e0d72ac)
 ## Giới thiệu
 - Link: [https://github.com/TH3xACE/SUDO_KILLER](https://github.com/TH3xACE/SUDO_KILLER)
 - Đây là một công cụ được thiết kế để khai thác Privilege Escalation trên các hệ thống Unix-like.
